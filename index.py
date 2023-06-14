@@ -15,6 +15,8 @@ def check_guess():
         messagebox.showinfo('Thats a bingo!', f"You correctly guessed the number in {num_guesses} attempts.")
         reset_game()
     
+    guess_entry.delete(0, tk.END)
+    guess_entry.focus()
 
 
 
@@ -23,3 +25,12 @@ def reset_game():
     number_to_guess = generate_random_number()
     num_guesses = 0
     result_label.config(text='')
+    guess_entry.delete(0, tk.END)
+    guess_entry.focus()
+
+
+window= tk.TK()
+window.title('Guess the Number')
+
+number_to_guess = generate_random_number()
+num_guesses = 0
