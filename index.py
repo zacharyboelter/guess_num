@@ -34,7 +34,7 @@ while running:
 
         if event.type == KEYDOWN:
             if event.key == K_RETURN:
-                guess = guess_text.strip()
+                guess = input_rect.text.strip()
 
                 try:
                     guess = int(guess)
@@ -59,6 +59,7 @@ while running:
     guess_text = pygame.draw.rect(window, WHITE, (150, 100, 100, 32), 2)
 
     # Display the result
+    result = ""
     draw_text(result, 50, 150)
 
     # Update the display
