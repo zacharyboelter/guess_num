@@ -8,6 +8,11 @@ style.configure("TLabel", font=("Arial", 14))
 style.configure("TButton", font=("Arial", 12))
 style.configure("TEntry", font=("Arial", 12))
 
+window = tk.Tk()
+window.title("Guess the Number")
+window.geometry("300x200")
+window.resizable(False, False)
+
 def generate_random_number():
     return random.randint(1, 100)
 
