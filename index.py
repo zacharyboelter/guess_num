@@ -1,6 +1,12 @@
 import random
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import ttk, messagebox
+
+style = ttk.Style()
+
+style.configure("TLabel", font=("Arial", 14))
+style.configure("TButton", font=("Arial", 12))
+style.configure("TEntry", font=("Arial", 12))
 
 def generate_random_number():
     return random.randint(1, 100)
